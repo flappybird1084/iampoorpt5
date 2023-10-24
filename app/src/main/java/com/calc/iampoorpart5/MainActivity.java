@@ -24,11 +24,19 @@ public class MainActivity extends AppCompatActivity {
 
         topLabel = findViewById(R.id.textView); // Find the TextView with id "textView"
 
+        // no javadocs >:)
+        // runs a function on the buttons
         rich.setOnClickListener(v -> verifyRichness(rich)); // When the button with id "button" is clicked it calls the verifyRichness method
         poor.setOnClickListener(v -> verifyRichness(poor)); // When the button with id "button2" is clicked it calls the verifyRichness method
 
     }
 
+
+    /**
+     * sets text to "i am" plus the text of the button
+     * buttons are named "rich" and "poor"
+     * @param button
+     */
     public void verifyRichness(Button button){
         topLabel.setText("I am " + button.getText()); //verifies richness by appending button text to the end string and puts that in toplabel
     }
